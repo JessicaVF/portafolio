@@ -5,7 +5,7 @@
   padding: 0;
   font-family: sans-serif;
 }
-main {
+body {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -59,15 +59,6 @@ nav {
   border-left: 500px solid rgb(255, 255, 255);
   position: relative;
 }
-/****** Mobile- linterna *****/
-.mobile {
-  width: 200px;
-  transform: rotate(30deg);
-  position: relative;
-  top: -80px;
-  right: 200px;
-}
-
 .information {
   width: 1000px;
   height: 1000px;
@@ -76,6 +67,16 @@ nav {
   left: -10%;
   transform: translateY(-50%);
 }
+/****** Mobile- linterna *****/
+.mobile {
+  width: 200px;
+  transform: rotate(30deg);
+  position: relative;
+  top: -80px;
+  right: 200px;
+  z-index: 1;
+}
+
 #circle {
   width: 1000px;
   height: 1000px;
@@ -86,6 +87,8 @@ nav {
   transform: rotate(0deg);
   transition: 1s;
 }
+/***** CONTROLS *****/
+
 .feature img {
   width: 70px;
 }
@@ -100,11 +103,31 @@ nav {
 .feature div p {
   margin-top: 8px;
 }
+.controls {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.controls h3 {
+  margin: 15px 0;
+}
+#upBtn {
+  width: 15px;
+  cursor: pointer;
+}
+#downBtn {
+  width: 15px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+/* alienamientos en circulo*/
 .one {
   top: 450px;
   right: 50px;
 }
-
 .two {
   top: 150px;
   left: 350px;
@@ -121,25 +144,4 @@ nav {
   bottom: 150px;
   right: 350px;
   transform: rotate(-270deg);
-}
-
-.controls {
-  position: absolute;
-  right: 10%;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-}
-
-.controls h3 {
-  margin: 15px 0;
-}
-#upBtn {
-  width: 15px;
-  cursor: pointer;
-}
-#downBtn {
-  width: 15px;
-  cursor: pointer;
-  transform: rotate(180deg);
 }
