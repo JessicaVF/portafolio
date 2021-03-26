@@ -49,6 +49,16 @@ nav {
   text-decoration: none;
 }
 /***** "CORE" *****/
+
+.overlay {
+  width: 0;
+  height: 0;
+  border-top: 500px solid rgb(255, 255, 255);
+  border-right: 500px solid transparent;
+  border-bottom: 500px solid rgb(255, 255, 255);
+  border-left: 500px solid rgb(255, 255, 255);
+  position: relative;
+}
 /****** Mobile- linterna *****/
 .mobile {
   width: 200px;
@@ -70,8 +80,8 @@ nav {
   width: 1000px;
   height: 1000px;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -500px;
+  left: -400px;
   border-radius: 50%;
   transform: rotate(0deg);
   transition: 1s;
@@ -132,15 +142,4 @@ nav {
   width: 15px;
   cursor: pointer;
   transform: rotate(180deg);
-}
-.overlay {
-  width: 0;
-  height: 0;
-  border-top: 500px solid rgb(255, 255, 255);
-  border-right: 500px solid transparent;
-  border-bottom: 500px solid rgb(255, 255, 255);
-  border-left: 500px solid rgb(255, 255, 255);
-  position: relative;
-  left: 0;
-  top: 0;
 }
