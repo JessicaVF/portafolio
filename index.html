@@ -32,46 +32,90 @@
                     <div class="feature one">
                         <img src="camera.png">
                         <div>
-                            <h1>Camera</h1>
+                            <h1>About Me</h1>
                             <p> some text</p>
                         </div>
                     </div>
                     <div class="feature two">
                         <img src="battery.png">
                         <div>
-                            <h1>Battery</h1>
+                            <h1>Proyects</h1>
                             <p> some text</p>
                         </div>
                     </div>
                     <div class="feature three">
                         <img src="processor.png">
                         <div>
-                            <h1>Processor</h1>
+                            <h1>Education</h1>
                             <p> some text</p>
                         </div>
                     </div>
                     <div class="feature four">
                         <img src="display.png">
                         <div>
-                            <h1>Display</h1>
+                            <h1>Skills</h1>
                             <p> some text</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="controls">
-            <img src="arrow.png" id="upBtn">
-            <h3>Features</h3>
-            <img src="arrow.png" id="downBtn">
-        </div>
+        <ul class="controls">
+            <li>
+                <img src="arrow.png" id="upBtn">
+            </li>
+            <li id="about">
+                <h4>About me</h4>
+            </li>
+            <li id="projects">
+                <h4>Projects</h4>
+            </li>
+            <li id="education">
+                <h4>Education</h4>
+            </li>
+            <li id="skills">
+                <h4>Skills</h4>
+            </li>
+            <li>
+                <img src="arrow.png" id="downBtn">
+            </li>
+        </ul>
     </main>
     <script>
+        var skills = document.getElementById("skills")
+        var education = document.getElementById("education")
+        var about = document.getElementById("about")
+        var projects = document.getElementById("projects")
         var circle = document.getElementById("circle")
         var upBtn = document.getElementById("upBtn")
         var downBtn = document.getElementById("downBtn")
         var rotateValue = circle.style.transform;
         var rotateSum;
+
+        skills.onclick = function () {
+            rotateSum = "";
+            rotateSum = "rotate(90deg)" + "rotate(90deg)" + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        about.onclick = function () {
+            rotateSum = "";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        projects.onclick = function () {
+            rotateSum = "";
+            rotateSum = "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+
+        }
+        education.onclick = function () {
+            rotateSum = "";
+            rotateSum = "rotate(90deg)" + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
         upBtn.onclick = function () {
             rotateSum = rotateValue + "rotate(-90deg)";
             circle.style.transform = rotateSum;
