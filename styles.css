@@ -52,11 +52,10 @@ nav {
 /****** Mobile- linterna *****/
 .mobile {
   width: 200px;
-  position: absolute;
-  top: 2000%;
-  right: 35000000%;
-  transform: translateY(-50%);
-  z-index: 1;
+  transform: rotate(30deg);
+  position: relative;
+  top: -80px;
+  right: 200px;
 }
 
 .information {
@@ -141,7 +140,7 @@ nav {
   border-right: 500px solid transparent;
   border-bottom: 500px solid rgb(255, 255, 255);
   border-left: 500px solid rgb(255, 255, 255);
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
 }
