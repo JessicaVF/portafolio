@@ -52,6 +52,7 @@ nav {
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
+  z-index: 1;
 }
 .controls li {
   height: 30px;
@@ -80,13 +81,13 @@ nav {
   left: 10%;
   transform: translateY(-50%);
 }
-.overlay {
+.hidder {
   width: 0;
   height: 0;
-  border-top: 500px solid rgb(255, 255, 255);
+  border-top: 500px solid transparent;
   border-right: 500px solid transparent;
-  border-bottom: 500px solid rgb(255, 255, 255);
-  border-left: 500px solid rgb(255, 255, 255);
+  border-bottom: 500px solid transparent;
+  border-left: 500px solid black;
   position: relative;
 }
 
@@ -105,8 +106,8 @@ nav {
   height: 1000px;
   position: absolute;
   top: -500px;
-  left: -400px;
-  border-radius: 50%;
+  left: -1100px;
+  border-radius: 20%;
   transform: rotate(0deg);
   transition: 1s;
 }
