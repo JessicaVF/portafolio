@@ -22,11 +22,11 @@ body {
 }
 
 /***** Navbar *****/
+
 nav {
   width: 80%;
   position: sticky;
   margin: 20px auto;
-  z-index: 1;
   display: flex;
   align-items: center;
 }
@@ -49,14 +49,21 @@ nav {
 .controls {
   position: absolute;
   width: 12%;
+  height: 1000px;
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
   z-index: 1;
+  background-color: black;
+}
+.controls div {
+  position: absolute;
+  transform: translateY(50%);
 }
 .controls li {
   height: 30px;
   padding: 20px;
+  color: white;
 }
 
 .controls h4 {
@@ -77,8 +84,8 @@ nav {
   width: 1000px;
   height: 1000px;
   position: absolute;
-  top: 50%;
-  left: 10%;
+  top: 47%;
+  left: 8%;
   transform: translateY(-50%);
 }
 .hidder {
