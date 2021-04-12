@@ -163,32 +163,6 @@ section#text_principal p:not(:first-of-type) {
   padding-top: 130px;
 }
 
-/* section#text_principal {
-  background-color: red;
-  width: 75%;
-  height: 1000px;
-  transform: translate(30%, 1%);
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  position: relative;
-  background: inherit;
-  overflow: hidden;
-  color: white;
-  font-size: 30px;
-}
-section#text_principal ::before {
-  content: "";
-  position: absolute;
-  background: inherit;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-  filter: blur(10px);
-  margin: -20px;
-} */
 /***** Space effect*****/
 span {
   animation: span 3s ease-in infinite alternate;
@@ -224,20 +198,3 @@ span {
     width: 30vw;
   }
 }
-/* iframe{
-  position: absolute;
-  float: left; 
-  clear: both;
-  margin-top: -10%; 
-  width: 100%; 
-  height: 120%; 
-  z-index: 0;
-  left no-repeat;
-}
-button{
-  z-index: 2;
-  background-color: red;
-  width: 50%;
-  height: 50%;
-  position: relative;
-} */
