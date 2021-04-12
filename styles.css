@@ -152,7 +152,7 @@ nav {
 section#text_principal {
   width: 60%;
   height: 1000px;
-  transform: translate(30%, 20%);
+  transform: translate(35%, 20%);
   position: relative;
   color: white;
   font-size: 20px;
