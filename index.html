@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/92d195fa75.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -23,6 +24,23 @@
         </nav>
     </header>
     <main>
+        <iframe id="myIframe" src="https://www.window-swap.com/Window" style="border:0px #ffffff none;" name="myiFrame"
+            scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="400px" width="600px"
+            allowfullscreen></iframe>
+        <button>Click meeeeeeeeeeeeeeeeeeeee !</button>
+
+        <section id="text_principal">
+            <p>Hi there! I am Jessica Villar, a restless curious mind. </p>
+
+
+            <p> I am venezuela-spanish and in the 2019...<span class="letter"></span><i class="fas fa-plane"></i> I
+                moved to
+                France!
+            </p>
+            <p> I am journalist, but when I changed country I also decide to change proffesional path and become
+                a programmer. Right now i am studing to get my certificate of web developper and looking for a stage in
+                Lyon or close to this wonderful city.</p>
+        </section>
         <ul class="controls">
             <div>
                 <li>
@@ -46,7 +64,7 @@
                 </li>
             </div>
         </ul>
-        <div class="information">
+        <div class="hidder_container">
             <div class="hidder">
                 <!-- <img src="flashlight-5998564_1280.png" class="mobile"> -->
                 <div id="circle">
@@ -81,11 +99,7 @@
                 </div>
             </div>
         </div>
-        <section>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ex voluptate, nisi error eveniet, tempore
-                molestias quisquam aliquid sapiente veritatis repellendus beatae earum aut inventore voluptas laborum
-                maiores. Consequuntur, illo?</p>
-        </section>
+
 
     </main>
     <script>
@@ -135,6 +149,18 @@
             rotateValue = rotateSum;
 
         }
+        const iframe = document.getElementById('myIframe');
+
+        let btn = getElementByTag(button);
+        btn.onclick = function reloading() {
+            let x = setInterval(fff, 3000);
+            console.log("test")
+        }
+        function fff() {
+            document.iframe.src += '';
+            console.log("test");
+        }
+
     </script>
 </body>
 

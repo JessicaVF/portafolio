@@ -29,6 +29,7 @@ nav {
   margin: 20px auto;
   display: flex;
   align-items: center;
+  z-index: 1;
 }
 
 .nav-links {
@@ -79,8 +80,8 @@ nav {
   transform: rotate(180deg);
 }
 
-/***** "CORE" *****/
-.information {
+/***** triangle effect *****/
+.hidder_container {
   width: 1000px;
   height: 1000px;
   position: absolute;
@@ -98,16 +99,7 @@ nav {
   position: relative;
 }
 
-/****** Mobile- linterna *****/
-.mobile {
-  width: 200px;
-  transform: rotate(30deg);
-  position: relative;
-  top: -80px;
-  right: 200px;
-  z-index: 1;
-}
-/***** otros core *****/
+/***** Circle in triangle*****/
 #circle {
   width: 1000px;
   height: 1000px;
@@ -133,7 +125,7 @@ nav {
   margin-top: 8px;
 }
 
-/* alienamientos en circulo*/
+/* alienments in circle*/
 .one {
   top: 450px;
   right: 50px;
@@ -154,4 +146,98 @@ nav {
   bottom: 150px;
   right: 350px;
   transform: rotate(-270deg);
+}
+
+/***** section text_principal About me ****/
+section#text_principal {
+  width: 60%;
+  height: 1000px;
+  transform: translate(30%, 20%);
+  position: relative;
+  color: white;
+  font-size: 20px;
+
+  margin-left: 300px;
+}
+section#text_principal p:not(:first-of-type) {
+  padding-top: 130px;
+}
+
+/* section#text_principal {
+  background-color: red;
+  width: 75%;
+  height: 1000px;
+  transform: translate(30%, 1%);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+  background: inherit;
+  overflow: hidden;
+  color: white;
+  font-size: 30px;
+}
+section#text_principal ::before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
+  margin: -20px;
+} */
+/***** Space effect*****/
+span {
+  animation: span 3s ease-in infinite alternate;
+}
+.letter {
+  display: inline-flex;
+  height: 30px;
+  width: 0px;
+  /* border: 2.5px solid #FF1EAD; */
+  /* border: 2.35px solid black;
+  border-radius: 14px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.45); */
+
+  animation: letter 3s ease-in-out infinite alternate;
+}
+@keyframes span {
+  0%,
+  30% {
+    margin: 0 15px;
+  }
+  70%,
+  100% {
+    margin: 0 5px;
+  }
+}
+@keyframes letter {
+  0%,
+  30% {
+    width: 27px;
+  }
+  70%,
+  100% {
+    width: 30vw;
+  }
+}
+iframe{
+  position: absolute;
+  float: left; 
+  clear: both;
+  margin-top: -10%; 
+  width: 100%; 
+  height: 120%; 
+  z-index: 0;
+  left no-repeat;
+}
+button{
+  z-index: 2;
+  background-color: red;
+  width: 50%;
+  height: 50%;
+  position: relative;
 }
