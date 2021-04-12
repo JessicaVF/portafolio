@@ -224,7 +224,7 @@ span {
     width: 30vw;
   }
 }
-iframe{
+/* iframe{
   position: absolute;
   float: left; 
   clear: both;
@@ -240,4 +240,4 @@ button{
   width: 50%;
   height: 50%;
   position: relative;
-}
+} */
