@@ -172,9 +172,9 @@ section#text_principal p:not(:first-of-type) {
   height: 30px;
   width: 0px;
   /* border: 2.5px solid #FF1EAD; */
-  /* border: 2.35px solid black;
+/* border: 2.35px solid black;
   border-radius: 14px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.45); */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.45); 
 
   animation: letter 3s ease-in-out infinite alternate;
 }
@@ -199,7 +199,7 @@ section#text_principal p:not(:first-of-type) {
   }
 }
 /***** Word swipe animation *****/
-div#1 {
+/* div#1 {
   overflow: hidden;
   position: relative;
   float: right;
@@ -237,16 +237,4 @@ div#1 {
 100% { margin-top: -270px; }
 }
 
-// Layout //////////////////////////////////////////
-
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Oswald);
-body,
-html {
-width: 100%;
-height: 100vh;
-margin: 0;
-padding: 0;
-overflow: hidden;
-} */
-
-
+*/
