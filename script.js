@@ -13,6 +13,7 @@ let upBtn = document.getElementById("upBtn");
 let downBtn = document.getElementById("downBtn");
 let rotateValue = circle.style.transform;
 let rotateSum;
+let position = 0;
 
 // Functions of the sections in the left menu
 about.onclick = function () {
@@ -45,15 +46,34 @@ skills.onclick = function () {
 };
 
 // Functions of the arrow buttons
+
 upBtn.onclick = function () {
-  rotateSum = rotateValue + "rotate(-90deg)";
+  console.log("u " + rotateSum);
+  if (position == 0) {
+    rotateSum = "rotate(-90deg)";
+    position = 3;
+  } else {
+    position -= 1;
+    rotateSum = rotateValue + "rotate(-90deg)";
+  }
   circle.style.transform = rotateSum;
   rotateValue = rotateSum;
+  console.log("position ", position);
 };
+//let lastPosition = "rotate(90deg)rotate(90deg)rotate(90deg)";
 downBtn.onclick = function () {
-  rotateSum = rotateValue + "rotate(90deg)";
+  console.log("d " + rotateSum);
+  if (position == 3) {
+    console.log("here");
+    rotateSum = "";
+    position = 0;
+  } else {
+    position += 1;
+    rotateSum = rotateValue + "rotate(90deg)";
+  }
   circle.style.transform = rotateSum;
   rotateValue = rotateSum;
+  console.log("position ", position);
 };
 /***** Insert info in #text_principal ******/
 
