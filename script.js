@@ -49,31 +49,29 @@ skills.onclick = function () {
 
 upBtn.onclick = function () {
   console.log("u " + rotateSum);
+  rotateSum = rotateValue + "rotate(-90deg)";
+  circle.style.transform = rotateSum;
+  rotateValue = rotateSum;
   if (position == 0) {
     rotateSum = "rotate(-90deg)";
     position = 3;
   } else {
     position -= 1;
-    rotateSum = rotateValue + "rotate(-90deg)";
   }
-  circle.style.transform = rotateSum;
-  rotateValue = rotateSum;
-  console.log("position ", position);
   getNameFile(position);
 };
 //let lastPosition = "rotate(90deg)rotate(90deg)rotate(90deg)";
 downBtn.onclick = function () {
   console.log("d " + rotateSum);
+  rotateSum = rotateValue + "rotate(90deg)";
+  circle.style.transform = rotateSum;
+  rotateValue = rotateSum;
   if (position == 3) {
-    console.log("here");
     rotateSum = "";
     position = 0;
   } else {
     position += 1;
-    rotateSum = rotateValue + "rotate(90deg)";
   }
-  circle.style.transform = rotateSum;
-  rotateValue = rotateSum;
   getNameFile(position);
 };
 /***** Insert info in #text_principal ******/
