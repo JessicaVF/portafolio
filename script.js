@@ -59,6 +59,7 @@ upBtn.onclick = function () {
   circle.style.transform = rotateSum;
   rotateValue = rotateSum;
   console.log("position ", position);
+  getNameFile(position);
 };
 //let lastPosition = "rotate(90deg)rotate(90deg)rotate(90deg)";
 downBtn.onclick = function () {
@@ -73,7 +74,7 @@ downBtn.onclick = function () {
   }
   circle.style.transform = rotateSum;
   rotateValue = rotateSum;
-  console.log("position ", position);
+  getNameFile(position);
 };
 /***** Insert info in #text_principal ******/
 
@@ -91,4 +92,10 @@ function insertInfo(x) {
     .catch(function (error) {
       console.log("error");
     });
+}
+/***** Transform the number we get into a name and call insertInfo ******/
+
+function getNameFile(position) {
+  let nameFile = ["about", "projects", "education", "skills"];
+  insertInfo(nameFile[position]);
 }
