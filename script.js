@@ -12,7 +12,7 @@ let circle = document.getElementById("circle");
 let upBtn = document.getElementById("upBtn");
 let downBtn = document.getElementById("downBtn");
 let rotateValue = circle.style.transform;
-let rotateSum;
+let rotateSum = "";
 let position = 0;
 
 // Functions of the sections in the left menu
@@ -27,6 +27,7 @@ projects.onclick = function () {
   rotateSum = "rotate(90deg)";
   circle.style.transform = rotateSum;
   rotateValue = rotateSum;
+  position = 1;
   insertInfo("projects");
 };
 
@@ -35,6 +36,7 @@ education.onclick = function () {
   rotateSum = "rotate(90deg)" + "rotate(90deg)";
   circle.style.transform = rotateSum;
   rotateValue = rotateSum;
+  position = 2;
   insertInfo("education");
 };
 skills.onclick = function () {
@@ -42,6 +44,7 @@ skills.onclick = function () {
   rotateSum = "rotate(90deg)" + "rotate(90deg)" + "rotate(90deg)";
   circle.style.transform = rotateSum;
   rotateValue = rotateSum;
+  position = 3;
   insertInfo("skills");
 };
 
@@ -60,9 +63,8 @@ upBtn.onclick = function () {
   }
   getNameFile(position);
 };
-//let lastPosition = "rotate(90deg)rotate(90deg)rotate(90deg)";
+// IGNORE let lastPosition = "rotate(90deg)rotate(90deg)rotate(90deg)";
 downBtn.onclick = function () {
-  console.log("d " + rotateSum);
   rotateSum = rotateValue + "rotate(90deg)";
   circle.style.transform = rotateSum;
   rotateValue = rotateSum;
@@ -74,17 +76,16 @@ downBtn.onclick = function () {
   }
   getNameFile(position);
 };
-/***** Insert info in #text_principal ******/
+// Insert info in #textPrincipal //
 
 function insertInfo(x) {
   let infoFile = `${x}.html`;
-  console.log(infoFile);
   fetch(infoFile)
     .then(function (response) {
       return response.text();
     })
     .then(function (data) {
-      let infoPrincipal = document.getElementById("text_principal");
+      let infoPrincipal = document.getElementById("textPrincipal");
       infoPrincipal.innerHTML = data;
     })
     .catch(function (error) {
@@ -94,6 +95,7 @@ function insertInfo(x) {
 /***** Transform the number we get into a name and call insertInfo ******/
 
 function getNameFile(position) {
+  console.log("here " + position);
   let nameFile = ["about", "projects", "education", "skills"];
   insertInfo(nameFile[position]);
 }

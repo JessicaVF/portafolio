@@ -46,7 +46,7 @@ nav {
   text-decoration: none;
 }
 /***** CONTROLS *****/
-
+/* The base of the spinning circle it comes from: https://www.youtube.com/watch?v=zxfhf-V4JFQ&list=PLoh7ONxrTlo7YeOuUaVxnzpWvs5vHd7Nw&index=1*/
 .controls {
   position: absolute;
   width: 12%;
@@ -70,13 +70,12 @@ nav {
 .controls h4 {
   margin: 15px 0;
 }
-#upBtn {
+#upBtn,
+#downBtn {
   width: 25px;
   cursor: pointer;
 }
 #downBtn {
-  width: 25px;
-  cursor: pointer;
   transform: rotate(180deg);
 }
 
@@ -149,92 +148,52 @@ nav {
 }
 
 /***** section text_principal About me ****/
-section#text_principal {
+section#textPrincipal {
   width: 60%;
   height: 1000px;
   transform: translate(35%, 20%);
   position: relative;
   color: white;
   font-size: 20px;
-  text-align: center;
   margin-left: 300px;
 }
-section#text_principal p:not(:first-of-type) {
+/***** About me *****/
+article#base {
+  padding-top: 50px;
+  text-align: center;
+}
+article#base p:not(:first-of-type) {
   padding-top: 70px;
 }
-
-/***** Space- plane effect*****/
-/* span {
-  animation: span 3s ease-in infinite alternate;
-}
-.letter {
-  display: inline-flex;
-  height: 30px;
-  width: 0px;
-  /* border: 2.5px solid #FF1EAD; */
-/* border: 2.35px solid black;
-  border-radius: 14px;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.45); 
-
-  animation: letter 3s ease-in-out infinite alternate;
-}
-@keyframes span {
-  0%,
-  30% {
-    margin: 0 15px;
-  }
-  70%,
-  100% {
-    margin: 0 5px;
-  }
-}
-@keyframes letter {
-  0%,
-  30% {
-    width: 27px;
-  }
-  70%,
-  100% {
-    width: 30vw;
-  }
-}
-/***** Word swipe animation *****/
-/* div#1 {
-  overflow: hidden;
-  position: relative;
-  float: right;
-  height: 65px;
-  padding-top: 10px;
-  margin-top: -10px;
-  li {
-      font-family: Serif;
-      color: #eee;
-      font-weight: 700;
-      padding: 0 10px;
-      height: 45px;
-      margin-bottom: 45px;
-      display: block;
-  }
-}
+/***** Projects *****/
+article#projectsInfo {
+  text-align: center;
 }
 
-.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
-.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
-.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+/***** Education *****/
 
-
-
-@keyframes flip4 {
-0% { margin-top: -360px; }
-5% { margin-top: -270px; }
-25% { margin-top: -270px; }
-30% { margin-top: -180px; }
-50% { margin-top: -180px; }
-55% { margin-top: -90px; }
-75% { margin-top: -90px; }
-80% { margin-top: 0px; }
-99.99% { margin-top: 0px; }
-100% { margin-top: -270px; }
+article#educationInfo p:not(:first-of-type) {
+  padding-top: 30px;
+}
+.educationTitle {
+  color: black;
+}
+.educatioDate {
+  color: royalblue;
+}
+article#educationInfo p:nth-child(even) {
+  font-size: 15px;
+}
+/***** Skills *****/
+article#skillsInfo {
+  display: flex;
+  justify-content: center;
 }
 
-*/
+article#skillsInfo ul li:not(:first-of-type) {
+  padding-top: 30px;
+  width: 300px;
+}
+article#skillsInfo ul:not(:first-of-type) li:first-of-type {
+  text-decoration: underline;
+}
