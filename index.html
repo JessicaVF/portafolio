@@ -35,8 +35,6 @@
 
                 </ul>
             </div> -->
-
-
             <p> I am venezuela-spanish and in the 2019
                 <!--<span class="letter"></span><i class="fas fa-plane"></i> --> I
                 moved to
@@ -107,54 +105,8 @@
 
 
     </main>
-    <script>
-        var skills = document.getElementById("skills")
-        var education = document.getElementById("education")
-        var about = document.getElementById("about")
-        var projects = document.getElementById("projects")
-        var circle = document.getElementById("circle")
-        var upBtn = document.getElementById("upBtn")
-        var downBtn = document.getElementById("downBtn")
-        var rotateValue = circle.style.transform;
-        var rotateSum;
-
-        skills.onclick = function () {
-            rotateSum = "";
-            rotateSum = "rotate(90deg)" + "rotate(90deg)" + "rotate(90deg)";
-            circle.style.transform = rotateSum;
-            rotateValue = rotateSum;
-        }
-        about.onclick = function () {
-            rotateSum = "";
-            circle.style.transform = rotateSum;
-            rotateValue = rotateSum;
-        }
-        projects.onclick = function () {
-            rotateSum = "";
-            rotateSum = "rotate(90deg)";
-            circle.style.transform = rotateSum;
-            rotateValue = rotateSum;
-
-        }
-        education.onclick = function () {
-            rotateSum = "";
-            rotateSum = "rotate(90deg)" + "rotate(90deg)";
-            circle.style.transform = rotateSum;
-            rotateValue = rotateSum;
-        }
-        upBtn.onclick = function () {
-            rotateSum = rotateValue + "rotate(-90deg)";
-            circle.style.transform = rotateSum;
-            rotateValue = rotateSum;
-
-        }
-        downBtn.onclick = function () {
-            rotateSum = rotateValue + "rotate(90deg)";
-            circle.style.transform = rotateSum;
-            rotateValue = rotateSum;
-
-        }
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js">
     </script>
 </body>
 
