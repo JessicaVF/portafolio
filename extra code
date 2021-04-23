@@ -1,0 +1,128 @@
+at the index.html:
+
+<article id="base">
+                <p>Hi there! I am Jessica Villar a restless curious mind. </p>
+                <div id="1">
+                    <ul class="flip4">
+                        <li>a restless curious mind.</li>
+                        <li> a laughs and jokes lover.</li>
+                        <li> a developper web.</li>
+                        <li> a team player.</li>
+
+                    </ul>
+                </div>
+                <p> I am venezuela-spanish and in the 2019
+                    <span class="letter"></span><i class="fas fa-plane"></i> I
+                    moved to
+                    France!
+                </p>
+                <p> I am journalist, but when I changed country I also decide to change proffesional path and become
+                    a programmer. Right now i am studing to get my certificate of web developper and looking for a stage
+                    in
+                    Lyon or close to this wonderful city.</p>
+            </article>
+
+styles:
+
+/***** Space- plane effect*****/
+/* span {
+  animation: span 3s ease-in infinite alternate;
+}
+.letter {
+  display: inline-flex;
+  height: 30px;
+  width: 0px;
+  /* border: 2.5px solid #FF1EAD; */
+/* border: 2.35px solid black;
+  border-radius: 14px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75), inset 0 0 2px rgba(0, 0, 0, 0.45); 
+
+  animation: letter 3s ease-in-out infinite alternate;
+}
+@keyframes span {
+  0%,
+  30% {
+    margin: 0 15px;
+  }
+  70%,
+  100% {
+    margin: 0 5px;
+  }
+}
+@keyframes letter {
+  0%,
+  30% {
+    width: 27px;
+  }
+  70%,
+  100% {
+    width: 30vw;
+  }
+}
+/***** Word swipe animation *****/
+/* div#1 {
+  overflow: hidden;
+  position: relative;
+  float: right;
+  height: 65px;
+  padding-top: 10px;
+  margin-top: -10px;
+  li {
+      font-family: Serif;
+      color: #eee;
+      font-weight: 700;
+      padding: 0 10px;
+      height: 45px;
+      margin-bottom: 45px;
+      display: block;
+  }
+}
+}
+
+.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+
+
+
+@keyframes flip4 {
+0% { margin-top: -360px; }
+5% { margin-top: -270px; }
+25% { margin-top: -270px; }
+30% { margin-top: -180px; }
+50% { margin-top: -180px; }
+55% { margin-top: -90px; }
+75% { margin-top: -90px; }
+80% { margin-top: 0px; }
+99.99% { margin-top: 0px; }
+100% { margin-top: -270px; }
+}
+
+*/
+
+skills (in french):
+
+<!-- <ul>
+    <li>HTML, CSS, Bootstrap</li>
+    <li>JavaScritpt (JQuery)</li>
+    <li>Python (Flask, django)</li>
+    <li>Bases de données</li>
+    <li>Git</li>
+    <li>Gestion des réseaux sociaux</li>
+    <li>Rédaction et traitement de
+        l'information</li>
+</ul>
+<ul>
+    <li>En cours d'apprentissage:
+    </li>
+    <li>Angular</li>
+    <li>PHP, Symfony
+    </li>
+    <li>Deploiement serveur</li>
+</ul>
+<ul>
+    <li> LANGAGES</li>
+    <li>Espagnol Natif</li>
+    <li>Anglais Courant</li>
+    <li>Français Moyen</li>
+</ul> -->
