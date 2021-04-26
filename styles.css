@@ -25,26 +25,30 @@ body {
 
 nav {
   width: 80%;
-  position: sticky;
   margin: 20px auto;
   display: flex;
   align-items: center;
   z-index: 1;
-}
-
-.nav-links {
-  flex: 1;
+  color: #fff;
   text-align: right;
 }
-.nav-links ul li {
+
+nav ul {
+  flex: 1;
+}
+nav ul li {
   list-style: none;
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 15px;
 }
-.nav-links ul li a {
-  color: #fff;
-  text-decoration: none;
+nav ul li ul li {
+  margin-right: -10px;
 }
+nav ul li ul li img {
+  width: 25px;
+  margin-bottom: -5px;
+}
+
 /***** CONTROLS *****/
 /* The base of the spinning circle it comes from: https://www.youtube.com/watch?v=zxfhf-V4JFQ&list=PLoh7ONxrTlo7YeOuUaVxnzpWvs5vHd7Nw&index=1*/
 .controls {
