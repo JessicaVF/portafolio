@@ -99,7 +99,9 @@ function getNameFile(position) {
   insertInfo(nameFile[position]);
 }
 /***** Change de language ******/
-$(".changeLanguage").click(function () {
+$(".changeLanguage").on("click", changeLanguage);
+
+function changeLanguage() {
   console.log("here");
 
   fetch("index_espanol.html")
@@ -107,10 +109,12 @@ $(".changeLanguage").click(function () {
       return response.text();
     })
     .then(function (data) {
-      let myBody = document.getElementsByTagName("body");
-      myBody[0].innerHTML = data;
+      // let myBody = document.getElementsByTagName("body");
+      // myBody[0].innerHTML = data;
+      //note: The jquery version make a error in the console but for now does not give problems
+      $("body").html(data);
     })
     .catch(function (error) {
       console.log("error");
     });
-});
+}
