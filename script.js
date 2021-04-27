@@ -95,7 +95,22 @@ function insertInfo(x) {
 /***** Transform the number we get into a name and call insertInfo ******/
 
 function getNameFile(position) {
-  console.log("here " + position);
   let nameFile = ["about", "projects", "education", "skills"];
   insertInfo(nameFile[position]);
 }
+/***** Change de language ******/
+$(".changeLanguage").click(function () {
+  console.log("here");
+
+  fetch("index_espanol.html")
+    .then(function (response) {
+      return response.text();
+    })
+    .then(function (data) {
+      let myBody = document.getElementsByTagName("body");
+      myBody[0].innerHTML = data;
+    })
+    .catch(function (error) {
+      console.log("error");
+    });
+});
