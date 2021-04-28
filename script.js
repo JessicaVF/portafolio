@@ -99,20 +99,25 @@ function getNameFile(position) {
   insertInfo(nameFile[position]);
 }
 /***** Change de language ******/
-$(".changeLanguage").on("click", changeLanguage);
+// $(".changeLanguage").on("click", changeLanguage);
 
-function changeLanguage() {
-  console.log("here");
-
-  fetch("index_espanol.html")
+$(".changeLanguage").on("click", function (event) {
+  changeLanguage($(event.target).data("language"));
+});
+function changeLanguage(language) {
+  let x = "index" + language + ".html";
+  console.log(x);
+  fetch(x)
     .then(function (response) {
       return response.text();
     })
     .then(function (data) {
       // let myBody = document.getElementsByTagName("body");
-      // myBody[0].innerHTML = data;
+      // myBody[0].innerHTML = doc;
+      //$("body").html(data);
       //note: The jquery version make a error in the console but for now does not give problems
-      $("body").html(data);
+      let home = $("nav ul li:first-of-type");
+      console.log(home);
     })
     .catch(function (error) {
       console.log("error");
