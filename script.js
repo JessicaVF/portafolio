@@ -14,6 +14,7 @@ let downBtn = document.getElementById("downBtn");
 let rotateValue = circle.style.transform;
 let rotateSum = "";
 let position = 0;
+let lang = "";
 
 // Functions of the sections in the left menu
 about.onclick = function () {
@@ -79,7 +80,7 @@ downBtn.onclick = function () {
 // Insert info in #textPrincipal //
 
 function insertInfo(x) {
-  let infoFile = `${x}.html`;
+  let infoFile = `${x}${lang}.html`;
   fetch(infoFile)
     .then(function (response) {
       return response.text();
@@ -99,27 +100,32 @@ function getNameFile(position) {
   insertInfo(nameFile[position]);
 }
 /***** Change de language ******/
-// $(".changeLanguage").on("click", changeLanguage);
 
 $(".changeLanguage").on("click", function (event) {
   changeLanguage($(event.target).data("language"));
 });
 function changeLanguage(language) {
-  let x = "index" + language + ".html";
+  let x = "index" + language + ".json";
   console.log(x);
   fetch(x)
     .then(function (response) {
-      return response.text();
+      return response.json();
     })
     .then(function (data) {
-      // let myBody = document.getElementsByTagName("body");
-      // myBody[0].innerHTML = doc;
-      //$("body").html(data);
-      //note: The jquery version make a error in the console but for now does not give problems
-      let home = $("nav ul li:first-of-type");
-      console.log(home);
+      let toTranslate = $(".translate");
+      toTranslate[0].innerText = data.home;
+      toTranslate[1].innerText = data.cv;
+      toTranslate[2].innerText = data.contact;
+      toTranslate[3].innerText = data.about;
+      toTranslate[7].innerText = data.about;
+      toTranslate[4].innerText = data.projects;
+      toTranslate[8].innerText = data.projects;
+      toTranslate[5].innerText = data.education;
+      toTranslate[9].innerText = data.education;
+      toTranslate[6].innerText = data.skills;
+      toTranslate[10].innerText = data.skills;
     })
     .catch(function (error) {
-      console.log("error");
+      console.log(error);
     });
 }
