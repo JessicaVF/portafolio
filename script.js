@@ -106,6 +106,7 @@ $(".changeLanguage").on("click", function (event) {
 });
 function changeLanguage(language) {
   let x = "index" + language + ".json";
+  lang = language;
   console.log(x);
   fetch(x)
     .then(function (response) {
@@ -124,6 +125,7 @@ function changeLanguage(language) {
       toTranslate[9].innerText = data.education;
       toTranslate[6].innerText = data.skills;
       toTranslate[10].innerText = data.skills;
+      getNameFile(position);
     })
     .catch(function (error) {
       console.log(error);
