@@ -1,9 +1,5 @@
 "use strict";
 
-// TO DO: optimize with jquery, maybe
-
-// Spining triangle selecion:
-
 let skills = document.getElementById("skills");
 let education = document.getElementById("education");
 let about = document.getElementById("about");
@@ -11,71 +7,45 @@ let projects = document.getElementById("projects");
 let circle = document.getElementById("circle");
 let upBtn = document.getElementById("upBtn");
 let downBtn = document.getElementById("downBtn");
-let rotateValue = circle.style.transform;
-let rotateSum = "";
 let position = 0;
 let lang = "";
+let rotates = [
+  "",
+  "rotate(90deg)",
+  "rotate(90deg)rotate(90deg)",
+  "rotate(90deg)rotate(90deg)rotate(90deg)",
+];
+let nameFile = ["about", "projects", "education", "skills"];
 
 // Functions of the sections in the left menu
 about.onclick = function () {
-  rotateSum = "";
-  circle.style.transform = rotateSum;
-  rotateValue = rotateSum;
-  insertInfo("about");
+  position = 0;
+  spin(position);
 };
 projects.onclick = function () {
-  rotateSum = "";
-  rotateSum = "rotate(90deg)";
-  circle.style.transform = rotateSum;
-  rotateValue = rotateSum;
   position = 1;
-  insertInfo("projects");
+  spin(position);
 };
 
 education.onclick = function () {
-  rotateSum = "";
-  rotateSum = "rotate(90deg)" + "rotate(90deg)";
-  circle.style.transform = rotateSum;
-  rotateValue = rotateSum;
   position = 2;
-  insertInfo("education");
+  spin(position);
 };
 skills.onclick = function () {
-  rotateSum = "";
-  rotateSum = "rotate(90deg)" + "rotate(90deg)" + "rotate(90deg)";
-  circle.style.transform = rotateSum;
-  rotateValue = rotateSum;
   position = 3;
-  insertInfo("skills");
+  spin(position);
 };
 
 // Functions of the arrow buttons
 
 upBtn.onclick = function () {
-  console.log("u " + rotateSum);
-  rotateSum = rotateValue + "rotate(-90deg)";
-  circle.style.transform = rotateSum;
-  rotateValue = rotateSum;
-  if (position == 0) {
-    rotateSum = "rotate(-90deg)";
-    position = 3;
-  } else {
-    position -= 1;
-  }
-  getNameFile(position);
+  position == 0 ? (position = 3) : (position -= 1);
+  spin(position);
 };
-// IGNORE let lastPosition = "rotate(90deg)rotate(90deg)rotate(90deg)";
+
 downBtn.onclick = function () {
-  rotateSum = rotateValue + "rotate(90deg)";
-  circle.style.transform = rotateSum;
-  rotateValue = rotateSum;
-  if (position == 3) {
-    rotateSum = "";
-    position = 0;
-  } else {
-    position += 1;
-  }
-  getNameFile(position);
+  position == 3 ? (position = 0) : (position += 1);
+  spin(position);
 };
 // Insert info in #textPrincipal //
 
@@ -95,11 +65,11 @@ function insertInfo(x) {
 }
 /***** Transform the number we get into a name and call insertInfo ******/
 
-function getNameFile(position) {
-  let nameFile = ["about", "projects", "education", "skills"];
+function spin(position) {
+  circle.style.transform = rotates[position];
   insertInfo(nameFile[position]);
 }
-/***** Change de language ******/
+/***** Change the language ******/
 
 $(".changeLanguage").on("click", function (event) {
   changeLanguage($(event.target).data("language"));
@@ -125,7 +95,7 @@ function changeLanguage(language) {
       toTranslate[9].innerText = data.education;
       toTranslate[6].innerText = data.skills;
       toTranslate[10].innerText = data.skills;
-      getNameFile(position);
+      spin(position);
     })
     .catch(function (error) {
       console.log(error);
