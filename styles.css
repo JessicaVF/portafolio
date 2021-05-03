@@ -1,11 +1,13 @@
 /***** Globals *****/
-
-* {
+html {
+  height: 100%;
+}
+/* * {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   list-style-type: none;
-}
+} */
 body {
   width: 100%;
   height: 100vh;
@@ -51,32 +53,28 @@ nav ul li ul li img {
 
 /***** CONTROLS *****/
 /* The base of the spinning circle it comes from: https://www.youtube.com/watch?v=zxfhf-V4JFQ&list=PLoh7ONxrTlo7YeOuUaVxnzpWvs5vHd7Nw&index=1*/
+
 .controls {
-  position: absolute;
-  width: 12%;
-  height: 1000px;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  z-index: 1;
+  height: 100%;
+  width: 100%;
   background-color: black;
-}
-.controls div {
-  position: absolute;
-  transform: translateY(50%);
+  list-style: none;
+  color: white;
+  text-align: center;
+  padding: 0px 3px;
+  margin-top: 20%;
 }
 .controls li {
-  height: 30px;
-  padding: 20px;
-  color: white;
+  padding-top: 20%;
+  height: 16%;
+}
+.controls li h3 {
+  font-size: 100%;
 }
 
-.controls h4 {
-  margin: 15px 0;
-}
 #upBtn,
 #downBtn {
-  width: 25px;
+  width: 20%;
   cursor: pointer;
 }
 #downBtn {
