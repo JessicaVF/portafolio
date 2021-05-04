@@ -92,9 +92,7 @@ nav ul li ul li img {
   background-color: red;
 } */
 .cube-triangle {
-  /* width: 100px; */
-  height: 100px;
-  border: 150px solid transparent;
+  border: 150px solid red;
   border-left: 150px solid black;
   position: relative;
   margin-left: -5%;
@@ -104,13 +102,13 @@ nav ul li ul li img {
 /***** Circle in triangle*****/
 #circle {
   position: absolute;
-  top: 5%;
-  /* left: 55%; */
+  top: -70px;
+  left: -150px;
   /* border-radius: 1%; */
   transform: rotate(0deg);
   transition: 1s;
-  margin-left: -5%;
-  border: 1px solid red;
+  /* margin-left: -5%; */
+  border: 1px solid blue;
 }
 .translate {
   font-size: 10px;
@@ -119,10 +117,11 @@ nav ul li ul li img {
   /* display: flex;
   position: absolute; */
   color: #fff;
+  text-align: center;
 }
-.feature h2 {
+/* .feature h2 {
   margin-left: 30px;
-}
+} */
 
 /* alienments in circle*/
 /*.one {
