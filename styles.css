@@ -104,18 +104,15 @@ nav ul li ul li img {
   position: absolute;
   top: -70px;
   left: -150px;
-  /* border-radius: 1%; */
   transform: rotate(0deg);
   transition: 1s;
-  /* margin-left: -5%; */
-  border: 1px solid blue;
 }
 .translate {
   font-size: 10px;
 }
 .feature {
-  /* display: flex;
-  position: absolute; */
+  display: flex;
+  position: absolute;
   color: #fff;
   text-align: center;
 }
@@ -129,14 +126,14 @@ nav ul li ul li img {
   position: absolute;
   top: 0px;
   right: 0px;
-}
+}*/
 
 .two {
-  top: 150px;
-  left: 350px;
+  top: -120px;
+  left: 15px;
   transform: rotate(-90deg);
 }
-
+/*
 .three {
   bottom: 450px;
   left: 50px;
@@ -147,7 +144,8 @@ nav ul li ul li img {
   bottom: 150px;
   right: 350px;
   transform: rotate(-270deg);
-} */
+}
+*/
 /***** IMG Icon *****/
 
 .imgIcon {
