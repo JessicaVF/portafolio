@@ -22,6 +22,11 @@ body {
     #285aeb 90%
   );
 }
+/***** Cols from Bootstrap *****/
+.col-md-2 {
+  background-color: black;
+  z-index: 1;
+}
 
 /***** Navbar *****/
 
@@ -80,26 +85,31 @@ nav ul li ul li img {
 #downBtn {
   transform: rotate(180deg);
 }
+/***** IMG Icon *****/
 
-/***** triangle effect *****/
-/* .hidder_container {
-  width: 1000px;
-  height: 1000px;
-  position: absolute;
-  top: 48%;
-  left: 8%;
-  transform: translateY(-50%);
-  background-color: red;
-} */
+.imgIcon {
+  filter: invert(96%) sepia(0%) saturate(0%) hue-rotate(111deg) brightness(104%)
+    contrast(105%);
+  width: 70px;
+  /*position: relative;
+  top: -100px;
+  right: -40px; */
+}
+.imgIcon.imgAbout {
+  transform: scaleX(-1);
+}
+
+/***** triangle with icons*****/
+
 .cube-triangle {
-  border: 150px solid red;
+  border: 150px solid transparent;
   border-left: 150px solid black;
   position: relative;
   margin-left: -5%;
   top: calc(50% - 100px);
 }
 
-/***** Circle in triangle*****/
+/***** Circle with icons in triangle*****/
 #circle {
   position: absolute;
   top: -70px;
@@ -107,14 +117,22 @@ nav ul li ul li img {
   transform: rotate(0deg);
   transition: 1s;
 }
-.translate {
-  font-size: 10px;
-}
+
 .feature {
   display: flex;
   position: absolute;
   color: #fff;
   text-align: center;
+}
+
+h2.translate {
+  font-size: 10px;
+  color: #fff;
+  display: flex;
+  position: absolute;
+  top: 110px;
+  left: 20px;
+  width: 50px;
 }
 /* .feature h2 {
   margin-left: 30px;
@@ -129,35 +147,27 @@ nav ul li ul li img {
 }*/
 
 .two {
-  top: -120px;
-  left: 15px;
+  top: -100px;
+  left: 30px;
   transform: rotate(-90deg);
 }
-/*
+.two img {
+  padding: 5px;
+}
+
 .three {
-  bottom: 450px;
-  left: 50px;
+  top: -120px;
+  right: 15px;
   transform: rotate(-180deg);
+}
+.three h2 {
+  left: 1px;
 }
 
 .four {
-  bottom: 150px;
-  right: 350px;
+  top: -5px;
+  right: 20px;
   transform: rotate(-270deg);
-}
-*/
-/***** IMG Icon *****/
-
-.imgIcon {
-  filter: invert(96%) sepia(0%) saturate(0%) hue-rotate(111deg) brightness(104%)
-    contrast(105%);
-  width: 70px;
-  /*position: relative;
-  top: -100px;
-  right: -40px; */
-}
-.imgIcon.imgAbout {
-  transform: scaleX(-1);
 }
 
 /***** section textPrincipal****/
