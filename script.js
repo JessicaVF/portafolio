@@ -17,7 +17,6 @@ let rotates = [
 ];
 let nameFile = ["about", "projects", "education", "skills"];
 let imgId = [imgAbout, imgProjects, imgEducation, imgSkills];
-
 // Functions of the sections in the left menu
 about.onclick = function () {
   position = 0;

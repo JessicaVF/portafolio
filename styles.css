@@ -2,12 +2,6 @@
 html {
   height: 100%;
 }
-/* * {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  list-style-type: none;
-} */
 body {
   width: 100%;
   height: 100vh;
@@ -57,7 +51,7 @@ nav ul li ul li img {
 }
 
 /***** CONTROLS *****/
-/* The base of the spinning circle it comes from: https://www.youtube.com/watch?v=zxfhf-V4JFQ&list=PLoh7ONxrTlo7YeOuUaVxnzpWvs5vHd7Nw&index=1*/
+/* Basic idea and formule for the rotation feature came from: https://www.youtube.com/watch?v=zxfhf-V4JFQ&list=PLoh7ONxrTlo7YeOuUaVxnzpWvs5vHd7Nw&index=1*/
 
 .controls {
   height: 100%;
@@ -117,13 +111,6 @@ nav ul li ul li img {
   transition: 1s;
 }
 
-.feature {
-  display: flex;
-  position: absolute;
-  color: #fff;
-  text-align: center;
-}
-
 h2.translate {
   font-size: 10px;
   color: #fff;
@@ -133,9 +120,18 @@ h2.translate {
   left: 20px;
   width: 50px;
 }
-
+#imgAbout {
+  opacity: 1;
+}
 /* individual alienments in circle*/
 
+.feature {
+  display: flex;
+  position: absolute;
+  color: #fff;
+  text-align: center;
+}
+/* note: the class "one" is was not longer needed as it's position is the default position. It was erased from the hml aswell */
 .two {
   top: -115px;
   left: 20px;
