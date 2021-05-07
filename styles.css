@@ -107,6 +107,7 @@ nav ul li ul li img {
   position: relative;
   margin-left: -5%;
   top: calc(50% - 100px);
+  clip-path: polygon(50% 50%, 0 0, 0 100%);
 }
 
 /***** Circle with icons in triangle*****/
@@ -147,12 +148,15 @@ h2.translate {
 }*/
 
 .two {
-  top: -100px;
-  left: 30px;
+  top: -115px;
+  left: 20px;
   transform: rotate(-90deg);
 }
 .two img {
-  padding: 5px;
+  width: 80px;
+}
+.two h2 {
+  top: 140px;
 }
 
 .three {
