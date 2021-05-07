@@ -60,7 +60,7 @@ function insertInfo(x) {
       infoPrincipal.innerHTML = data;
     })
     .catch(function (error) {
-      console.log("error");
+      console.log(error);
     });
 }
 /***** Transform the number we get into a name and call insertInfo ******/
