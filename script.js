@@ -16,6 +16,7 @@ let rotates = [
   "rotate(90deg)rotate(90deg)rotate(90deg)",
 ];
 let nameFile = ["about", "projects", "education", "skills"];
+let imgId = [imgAbout, imgProjects, imgEducation, imgSkills];
 
 // Functions of the sections in the left menu
 about.onclick = function () {
@@ -67,6 +68,12 @@ function insertInfo(x) {
 
 function spin(position) {
   circle.style.transform = rotates[position];
+  for (let i = 0; i < imgId.length; i++) {
+    if (imgId.indexOf[imgId[i]] != position) {
+      imgId[i].style.opacity = 0;
+    }
+  }
+  imgId[position].style.opacity = 1;
   insertInfo(nameFile[position]);
 }
 /***** Change the language ******/
@@ -77,7 +84,6 @@ $(".changeLanguage").on("click", function (event) {
 function changeLanguage(language) {
   let x = "index" + language + ".json";
   lang = language;
-  console.log(x);
   fetch(x)
     .then(function (response) {
       return response.json();

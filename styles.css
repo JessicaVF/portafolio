@@ -91,11 +91,9 @@ nav ul li ul li img {
   filter: invert(96%) sepia(0%) saturate(0%) hue-rotate(111deg) brightness(104%)
     contrast(105%);
   width: 70px;
-  /*position: relative;
-  top: -100px;
-  right: -40px; */
+  opacity: 0;
 }
-.imgIcon.imgAbout {
+.imgIcon#imgAbout {
   transform: scaleX(-1);
 }
 
@@ -135,17 +133,8 @@ h2.translate {
   left: 20px;
   width: 50px;
 }
-/* .feature h2 {
-  margin-left: 30px;
-} */
 
-/* alienments in circle*/
-/*.one {
-  display: flex;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}*/
+/* individual alienments in circle*/
 
 .two {
   top: -115px;
