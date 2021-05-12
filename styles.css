@@ -25,11 +25,10 @@ body {
 /***** Navbar *****/
 
 nav {
-  width: 80%;
-  margin: 20px auto;
+  width: 100%;
+  margin: 20px -20px;
   display: flex;
   align-items: center;
-  z-index: 1;
   color: #fff;
   text-align: right;
 }
@@ -61,7 +60,8 @@ nav ul li ul li img {
   color: white;
   text-align: center;
   padding: 0px 3px;
-  margin-top: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 .controls li {
   padding-top: 20%;
@@ -79,7 +79,7 @@ nav ul li ul li img {
 #downBtn {
   transform: rotate(180deg);
 }
-/***** IMG Icon *****/
+/***** IMG Icon (triangle) *****/
 
 .imgIcon {
   filter: invert(96%) sepia(0%) saturate(0%) hue-rotate(111deg) brightness(104%)
@@ -113,12 +113,12 @@ nav ul li ul li img {
 
 h2.translate {
   font-size: 10px;
-  color: #fff;
+  color: white;
   display: flex;
   position: absolute;
   top: 110px;
   left: 20px;
-  width: 50px;
+  /* width: 50px; */
 }
 #imgAbout {
   opacity: 1;
@@ -131,7 +131,10 @@ h2.translate {
   color: #fff;
   text-align: center;
 }
-/* note: the class "one" is was not longer needed as it's position is the default position. It was erased from the hml aswell */
+/* note: the class "one" is was not like the others ('two, three...'), it became useless at some point and i just reused the name for a thing inside the same div */
+.one {
+  width: 50px;
+}
 .two {
   top: -115px;
   left: 20px;
@@ -158,7 +161,8 @@ h2.translate {
   right: 20px;
   transform: rotate(-270deg);
 }
-
+#skillH {
+}
 /***** section textPrincipal****/
 section#textPrincipal {
   width: 60%;

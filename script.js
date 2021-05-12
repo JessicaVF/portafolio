@@ -9,6 +9,7 @@ let upBtn = document.getElementById("upBtn");
 let downBtn = document.getElementById("downBtn");
 let position = 0;
 let lang = "";
+let skillH = document.getElementById("skillH");
 let rotates = [
   "",
   "rotate(90deg)",
@@ -89,10 +90,6 @@ function changeLanguage(language) {
     })
     .then(function (data) {
       let toTranslate = $(".translate");
-      for (let i = 0; i < toTranslate.length; i++) {
-        console.log("number: " + i + " ");
-        console.log(toTranslate[i]);
-      }
       toTranslate[0].innerText = data.about;
       toTranslate[1].innerText = data.projects;
       toTranslate[2].innerText = data.education;
@@ -104,7 +101,14 @@ function changeLanguage(language) {
       toTranslate[8].innerText = data.home;
       toTranslate[9].innerText = data.cv;
       toTranslate[10].innerText = data.contact;
-
+      console.log(lang);
+      if (lang == "") {
+        console.log(skillH);
+        skillH.style.left = "25%";
+      } else {
+        skillH.style.left = "12%";
+        console.log(skillH);
+      }
       spin(position);
     })
     .catch(function (error) {
