@@ -89,17 +89,22 @@ function changeLanguage(language) {
     })
     .then(function (data) {
       let toTranslate = $(".translate");
-      toTranslate[0].innerText = data.home;
-      toTranslate[1].innerText = data.cv;
-      toTranslate[2].innerText = data.contact;
-      toTranslate[3].innerText = data.about;
-      toTranslate[7].innerText = data.about;
-      toTranslate[4].innerText = data.projects;
-      toTranslate[8].innerText = data.projects;
-      toTranslate[5].innerText = data.education;
-      toTranslate[9].innerText = data.education;
-      toTranslate[6].innerText = data.skills;
-      toTranslate[10].innerText = data.skills;
+      for (let i = 0; i < toTranslate.length; i++) {
+        console.log("number: " + i + " ");
+        console.log(toTranslate[i]);
+      }
+      toTranslate[0].innerText = data.about;
+      toTranslate[1].innerText = data.projects;
+      toTranslate[2].innerText = data.education;
+      toTranslate[3].innerText = data.skills;
+      toTranslate[4].innerText = data.about;
+      toTranslate[5].innerText = data.projects;
+      toTranslate[6].innerText = data.education;
+      toTranslate[7].innerText = data.skills;
+      toTranslate[8].innerText = data.home;
+      toTranslate[9].innerText = data.cv;
+      toTranslate[10].innerText = data.contact;
+
       spin(position);
     })
     .catch(function (error) {
