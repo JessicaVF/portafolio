@@ -194,16 +194,20 @@ article#projectsInfo img {
 /***** Education *****/
 
 article#educationInfo p:not(:first-of-type) {
-  padding-top: 30px;
+  padding-top: 5%;
 }
-.educationTitle {
-  color: black;
+article#educationInfo {
+  padding-left: 5%;
+}
+.educationLocation {
+  font-size: 15px;
+  font-style: italic;
 }
 .educatioDate {
   color: royalblue;
 }
-article#educationInfo p:nth-child(even) {
-  font-size: 15px;
+article#educationInfo p span {
+  font-size: 20px;
 }
 /***** Skills *****/
 article#skillsInfo {
