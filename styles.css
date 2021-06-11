@@ -219,6 +219,8 @@ article#skillsInfo ul li:not(:first-of-type) {
   padding-top: 30px;
   width: 300px;
 }
-article#skillsInfo ul:not(:first-of-type) li:first-of-type {
+article#skillsInfo ul li:first-of-type {
   text-decoration: underline;
+  list-style: none;
+  font-size: 22px;
 }
