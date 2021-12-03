@@ -162,26 +162,23 @@ h2.translate {
   right: 20px;
   transform: rotate(-270deg);
 }
-#skillH {
-}
+
 /***** section textPrincipal****/
+
 section#textPrincipal {
   width: 100%;
-  /* height: 30%; */
-
-  /* transform: translate(35%, 20%);
-  position: relative; */
   color: white;
   font-size: 20px;
-  /* margin-left: 300px; */
+  
 }
 /***** About me *****/
+
 article#base {
-  padding-top: 50px;
-  text-align: center;
+  margin-top: 20%;
+  
 }
 article#base p:not(:first-of-type) {
-  padding-top: 70px;
+  padding-top: 5%;
 }
 /***** Projects *****/
 article#projectsInfo {
