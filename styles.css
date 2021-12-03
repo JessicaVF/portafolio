@@ -222,3 +222,19 @@ article#skillsInfo ul li:first-of-type {
   list-style: none;
   font-size: 22px;
 }
+/***** CV *****/
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 300px solid transparent;
+  border-right: 300px solid transparent;
+  border-bottom: 350px solid black;
+}
+
+.centerTest{
+  text-align: center;
+  top: 150px;
+  left: -47px;
+  position: relative;
+}
