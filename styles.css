@@ -1,10 +1,6 @@
 /***** Globals *****/
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  list-style-type: none;
+html {
+  height: 100%;
 }
 body {
   width: 100%;
@@ -12,23 +8,25 @@ body {
   position: relative;
   overflow: hidden;
   background: linear-gradient(
-    to right,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(32, 105, 101, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
   );
+}
+/***** Cols from Bootstrap *****/
+.col-md-2:first-of-type {
+  background-color: black;
+  z-index: 1;
 }
 
 /***** Navbar *****/
 
 nav {
-  width: 80%;
-  margin: 20px auto;
+  width: 100%;
+  margin: 20px -20px;
   display: flex;
   align-items: center;
-  z-index: 1;
   color: #fff;
   text-align: right;
 }
@@ -50,131 +48,129 @@ nav ul li ul li img {
 }
 
 /***** CONTROLS *****/
-/* The base of the spinning circle it comes from: https://www.youtube.com/watch?v=zxfhf-V4JFQ&list=PLoh7ONxrTlo7YeOuUaVxnzpWvs5vHd7Nw&index=1*/
+/* Basic idea and formule for the rotation feature came from: https://www.youtube.com/watch?v=zxfhf-V4JFQ&list=PLoh7ONxrTlo7YeOuUaVxnzpWvs5vHd7Nw&index=1*/
+
 .controls {
-  position: absolute;
-  width: 12%;
-  height: 1000px;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: center;
-  z-index: 1;
+  height: 100%;
+  width: 100%;
   background-color: black;
-}
-.controls div {
-  position: absolute;
-  transform: translateY(50%);
+  list-style: none;
+  color: white;
+  text-align: center;
+  padding: 0px 3px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 .controls li {
-  height: 30px;
-  padding: 20px;
-  color: white;
+  padding-top: 20%;
+  height: 16%;
+}
+.controls li h3 {
+  font-size: 100%;
 }
 
-.controls h4 {
-  margin: 15px 0;
-}
 #upBtn,
 #downBtn {
-  width: 25px;
+  width: 20%;
   cursor: pointer;
 }
 #downBtn {
   transform: rotate(180deg);
 }
+/***** IMG Icon (triangle) *****/
 
-/***** triangle effect *****/
-.hidder_container {
-  width: 1000px;
-  height: 1000px;
-  position: absolute;
-  top: 48%;
-  left: 8%;
-  transform: translateY(-50%);
+.imgIcon {
+  filter: invert(96%) sepia(0%) saturate(0%) hue-rotate(111deg) brightness(104%)
+    contrast(105%);
+  width: 70px;
+  opacity: 0;
 }
-.hidder {
-  width: 0;
-  height: 0;
-  border-top: 500px solid transparent;
-  border-right: 500px solid transparent;
-  border-bottom: 500px solid transparent;
-  border-left: 500px solid black;
+.imgIcon#imgAbout {
+  transform: scaleX(-1);
+}
+
+/***** triangle with icons*****/
+
+.cube-triangle {
+  border: 150px solid transparent;
+  border-left: 150px solid black;
   position: relative;
+  margin-left: -5%;
+  top: calc(50% - 100px);
+  clip-path: polygon(50% 50%, 0 0, 0 100%);
 }
 
-/***** Circle in triangle*****/
+/***** Circle with icons in triangle*****/
 #circle {
-  width: 1000px;
-  height: 1000px;
   position: absolute;
-  top: -500px;
-  left: -1100px;
-  border-radius: 20%;
+  top: -70px;
+  left: -150px;
   transform: rotate(0deg);
   transition: 1s;
 }
+
+h2.translate {
+  font-size: 10px;
+  color: white;
+  display: flex;
+  position: absolute;
+  top: 110px;
+  left: 20px;
+  /* width: 50px; */
+}
+#imgAbout {
+  opacity: 1;
+}
+/* individual alienments in circle*/
+
 .feature {
   display: flex;
   position: absolute;
   color: #fff;
+  text-align: center;
 }
-.feature h2 {
-  margin-left: 30px;
-}
-
-/* alienments in circle*/
+/* note: the class "one" is was not like the others ('two, three...'), it became useless at some point and i just reused the name for a thing inside the same div */
 .one {
-  top: 450px;
-  right: 50px;
+  width: 50px;
 }
 .two {
-  top: 150px;
-  left: 350px;
+  top: -115px;
+  left: 20px;
   transform: rotate(-90deg);
+}
+.two img {
+  width: 80px;
+}
+.two h2 {
+  top: 140px;
 }
 
 .three {
-  bottom: 450px;
-  left: 50px;
+  top: -120px;
+  right: 15px;
   transform: rotate(-180deg);
+}
+.three h2 {
+  left: 1px;
 }
 
 .four {
-  bottom: 150px;
-  right: 350px;
+  top: -5px;
+  right: 20px;
   transform: rotate(-270deg);
 }
-/***** IMG Icon *****/
-
-/* #imgAbout {
-  filter: invert(96%) sepia(0%) saturate(0%) hue-rotate(111deg) brightness(104%)
-    contrast(105%);
-  width: 150px;
-  position: relative;
-  top: -100px;
-  right: -40px;
-} */
-.imgIcon {
-  filter: invert(96%) sepia(0%) saturate(0%) hue-rotate(111deg) brightness(104%)
-    contrast(105%);
-  width: 150px;
-  position: relative;
-  top: -100px;
-  right: -40px;
+#skillH {
 }
-.imgIcon.imgAbout {
-  transform: scaleX(-1);
-}
-
 /***** section textPrincipal****/
 section#textPrincipal {
-  width: 60%;
-  height: 1000px;
-  transform: translate(35%, 20%);
-  position: relative;
+  width: 100%;
+  /* height: 30%; */
+
+  /* transform: translate(35%, 20%);
+  position: relative; */
   color: white;
   font-size: 20px;
-  margin-left: 300px;
+  /* margin-left: 300px; */
 }
 /***** About me *****/
 article#base {
@@ -189,19 +185,27 @@ article#projectsInfo {
   text-align: center;
 }
 
+article#projectsInfo img {
+  width: 70%;
+}
+
 /***** Education *****/
 
 article#educationInfo p:not(:first-of-type) {
-  padding-top: 30px;
+  padding-top: 5%;
 }
-.educationTitle {
-  color: black;
+article#educationInfo {
+  padding-left: 5%;
+}
+.educationLocation {
+  font-size: 15px;
+  font-style: italic;
 }
 .educatioDate {
   color: royalblue;
 }
-article#educationInfo p:nth-child(even) {
-  font-size: 15px;
+article#educationInfo p span {
+  font-size: 20px;
 }
 /***** Skills *****/
 article#skillsInfo {
@@ -213,6 +217,8 @@ article#skillsInfo ul li:not(:first-of-type) {
   padding-top: 30px;
   width: 300px;
 }
-article#skillsInfo ul:not(:first-of-type) li:first-of-type {
+article#skillsInfo ul li:first-of-type {
   text-decoration: underline;
+  list-style: none;
+  font-size: 22px;
 }

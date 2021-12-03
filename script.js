@@ -9,6 +9,7 @@ let upBtn = document.getElementById("upBtn");
 let downBtn = document.getElementById("downBtn");
 let position = 0;
 let lang = "";
+let skillH = document.getElementById("skillH");
 let rotates = [
   "",
   "rotate(90deg)",
@@ -16,8 +17,10 @@ let rotates = [
   "rotate(90deg)rotate(90deg)rotate(90deg)",
 ];
 let nameFile = ["about", "projects", "education", "skills"];
+let imgId = [imgAbout, imgProjects, imgEducation, imgSkills];
 
-// Functions of the sections in the left menu
+// Functions of the sections in the left menu, onclick they will position their icon/ ilustration in the black triangle
+
 about.onclick = function () {
   position = 0;
   spin(position);
@@ -60,13 +63,19 @@ function insertInfo(x) {
       infoPrincipal.innerHTML = data;
     })
     .catch(function (error) {
-      console.log("error");
+      console.log(error);
     });
 }
 /***** Transform the number we get into a name and call insertInfo ******/
 
 function spin(position) {
   circle.style.transform = rotates[position];
+  for (let i = 0; i < imgId.length; i++) {
+    if (imgId.indexOf[imgId[i]] != position) {
+      imgId[i].style.opacity = 0;
+    }
+  }
+  imgId[position].style.opacity = 1;
   insertInfo(nameFile[position]);
 }
 /***** Change the language ******/
@@ -77,24 +86,31 @@ $(".changeLanguage").on("click", function (event) {
 function changeLanguage(language) {
   let x = "index" + language + ".json";
   lang = language;
-  console.log(x);
   fetch(x)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
       let toTranslate = $(".translate");
-      toTranslate[0].innerText = data.home;
-      toTranslate[1].innerText = data.cv;
-      toTranslate[2].innerText = data.contact;
-      toTranslate[3].innerText = data.about;
-      toTranslate[7].innerText = data.about;
-      toTranslate[4].innerText = data.projects;
-      toTranslate[8].innerText = data.projects;
-      toTranslate[5].innerText = data.education;
-      toTranslate[9].innerText = data.education;
-      toTranslate[6].innerText = data.skills;
-      toTranslate[10].innerText = data.skills;
+      toTranslate[0].innerText = data.about;
+      toTranslate[1].innerText = data.projects;
+      toTranslate[2].innerText = data.education;
+      toTranslate[3].innerText = data.skills;
+      toTranslate[4].innerText = data.about;
+      toTranslate[5].innerText = data.projects;
+      toTranslate[6].innerText = data.education;
+      toTranslate[7].innerText = data.skills;
+      toTranslate[8].innerText = data.home;
+      toTranslate[9].innerText = data.cv;
+      toTranslate[10].innerText = data.contact;
+      console.log(lang);
+      if (lang == "") {
+        console.log(skillH);
+        skillH.style.left = "25%";
+      } else {
+        skillH.style.left = "12%";
+        console.log(skillH);
+      }
       spin(position);
     })
     .catch(function (error) {

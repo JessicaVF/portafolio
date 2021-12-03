@@ -4,49 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <title>original version</title>
+    <title>bootstrap-version</title>
     <script src="https://kit.fontawesome.com/92d195fa75.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li class="translate">Home</li>
-                <li class="translate">Get my CV</li>
-                <li class="translate">Contact me</li>
-                <li>
-                    <ul>
-                        <li><img class="changeLanguage" data-language="" src="flagUK.png"></li>
-                        <li><img class="changeLanguage" data-language="Spanish" src="flagSpain.png"></li>
-                        <li><img class="changeLanguage" data-language="French" src="flagFrance.png"></li>
 
-                    </ul>
-                </li>
-            </ul>
 
-        </nav>
-    </header>
-    <main>
-        <section id="textPrincipal">
-            <article id="base">
-                <p>Hi there! My name is Jessica Villar; I am a restless curious mind. </p>
-                <p> I am a venezuelan-spanish and in the 2019 I moved to France!</p>
-                <p> My carreer started as journalist, but when I changed country I also decided to change professional
-                    path and become a programmer. Right now I am studying to get my certificate of web developper and
-                    looking for a
-                    internship (stage) in Lyon or close to this wonderful city.</p>
-            </article>
-        </section>
-        <ul class="controls">
-            <div>
+    <!-- <body class="container h-100 mx-0"> -->
+
+    <div class="row h-100">
+
+
+        <div class="col-md-2">
+
+            <ul class="controls">
+
                 <li>
                     <img src="arrow.png" id="upBtn">
                 </li>
                 <li id="about">
                     <h3 class="translate">About me</h3>
-
                 </li>
                 <li id="projects">
                     <h3 class="translate">Projects</h3>
@@ -60,44 +41,74 @@
                 <li>
                     <img src="arrow.png" id="downBtn">
                 </li>
-            </div>
-        </ul>
-        <div class="hidder_container">
-            <div class="hidder">
+
+            </ul>
+        </div>
+        <div class="col-md-1 g-0">
+            <div class="cube-triangle">
                 <div id="circle">
-                    <div class="feature one">
-                        <img src="imgAbout.svg" class="imgIcon imgAbout">
-
-                        <h2 class="translate">About Me</h2>
-
+                    <div class="feature">
+                        <img src="imgAbout.svg" class="imgIcon" id="imgAbout">
                     </div>
+                    <h2 class="translate one">About Me</h2>
                     <div class="feature two">
-                        <img src="imgProjects.svg" class="imgIcon imgProjects">
-
+                        <img src="imgProjects.svg" class="imgIcon" id="imgProjects">
                         <h2 class="translate">Projects</h2>
-
                     </div>
+
                     <div class="feature three">
-                        <img src="imgEducation.svg" class="imgIcon">
-
+                        <img src="imgEducation.svg" class="imgIcon" id="imgEducation">
                         <h2 class="translate">Education</h2>
-
                     </div>
                     <div class="feature four">
-                        <img src="imgSkills.svg" class="imgIcon">
-
-                        <h2 class="translate">Skills</h2>
-
+                        <img src="imgSkills.svg" class="imgIcon" id="imgSkills">
+                        <h2 class="translate" id="skillH">Skills</h2>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col-md-9">
+            <nav>
+                <ul>
+                    <li class="translate">Home</li>
+                    <li class="translate">Get my CV</li>
+                    <li class="translate">Contact me</li>
+                    <li>
+                        <ul>
+                            <li><img class="changeLanguage" data-language="" src="flagUK.png"></li>
+                            <li><img class="changeLanguage" data-language="Spanish" src="flagSpain.png"></li>
+                            <li><img class="changeLanguage" data-language="French" src="flagFrance.png"></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <section id="textPrincipal">
+
+                <article id="base">
+
+                    <p>Hi there! My name is Jessica Villar; I am a restless curious mind. </p>
+                    <p> I am a venezuelan-spanish and in the 2019 I moved to France!</p>
+                    <p> My carreer started as journalist, but when I changed country I also decided to change
+                        professional
+                        path and become a programmer. Right now I am studying to get my certificate of web
+                        developper
+                        and
+                        looking for a
+                        internship (stage) in Lyon or close to this wonderful city.</p>
+                </article>
+            </section>
+        </div>
+    </div>
 
 
-    </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script.js">
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
