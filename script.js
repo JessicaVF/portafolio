@@ -18,7 +18,9 @@ let rotates = [
 ];
 let nameFile = ["about", "projects", "education", "skills"];
 let imgId = [imgAbout, imgProjects, imgEducation, imgSkills];
-// Functions of the sections in the left menu
+
+// Functions of the sections in the left menu, onclick they will position their icon/ ilustration in the black triangle
+
 about.onclick = function () {
   position = 0;
   spin(position);
