@@ -224,17 +224,20 @@ article#skillsInfo ul li:first-of-type {
 }
 /***** CV *****/
 
-.triangle-up {
-  width: 0;
-  height: 0;
-  border-left: 300px solid transparent;
-  border-right: 300px solid transparent;
-  border-bottom: 350px solid black;
+
+.triangle-right {
+  width: 0; 
+  height: 0; 
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid transparent;
+  border-left: 250px solid black;
 }
 
-.centerTest{
+.centerTextRight{
+  
   text-align: center;
-  top: 150px;
-  left: -47px;
+  top: -47px;
+  left: -190px;
   position: relative;
 }
+
