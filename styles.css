@@ -232,7 +232,13 @@ article#skillsInfo ul li:first-of-type {
   border-bottom: 200px solid transparent;
   border-left: 250px solid black;
 }
+.triangle-right:hover{
+  
+  /* -webkit-clip-path: polygon(56% 47%, 0 0, 0 97%);
+  clip-path: polygon(56% 47%, 0 0, 0 97%);
+  opacity: 0.5; */
 
+}
 .centerTextRight{
   text-align: center;
   top: -390%;
@@ -243,4 +249,21 @@ article#skillsInfo ul li:first-of-type {
 }
 .cvMarginTop{
   margin-top: 15%;
+}
+
+.flagCv{
+  -webkit-clip-path: polygon(56% 47%, 0 0, 0 97%);
+  clip-path: polygon(56% 47%, 0 0, 0 97%);
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
+}
+.textInFlag{
+  margin-top: 50%;
+  margin-left: 10%;
+  
+}
+.t{
+  color: #fff;
+  font-weight: bold;
 }
