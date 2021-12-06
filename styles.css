@@ -226,18 +226,17 @@ article#skillsInfo ul li:first-of-type {
 
 
 .triangle-right {
-  width: 0; 
-  height: 0; 
+  width: 100%; 
+  height: 90%; 
   border-top: 200px solid transparent;
   border-bottom: 200px solid transparent;
   border-left: 250px solid black;
 }
 
 .centerTextRight{
-  
   text-align: center;
-  top: -47px;
-  left: -190px;
+  top: -390%;
+  left: -130%;
   position: relative;
 }
 
