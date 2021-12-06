@@ -269,5 +269,11 @@ article#skillsInfo ul li:first-of-type {
   
 }
 .tf:hover{
-  background-image: linear-gradient(to right, #3200e9, #6544f1, #8a6ff6, #ab98f9, #cbc0f9, #d8c3f7, #e4c6f4, #eecaf2, #fca1d8, #ff72a7, #ff3d65, #f4000b);
+  background-image: url(fr.png);
+  background-position: center;
+}
+.ts:hover{
+  background-image: url(spain.png);
+  background-position: center;
+
 }
