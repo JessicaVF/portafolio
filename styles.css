@@ -231,13 +231,7 @@ article#skillsInfo ul li:first-of-type {
   border-top: 200px solid transparent;
   border-bottom: 200px solid transparent;
   border-left: 250px solid black;
-}
-.triangle-right:hover{
-  
-  /* -webkit-clip-path: polygon(56% 47%, 0 0, 0 97%);
-  clip-path: polygon(56% 47%, 0 0, 0 97%);
-  opacity: 0.5; */
-
+  margin-left: 25%;
 }
 .centerTextRight{
   text-align: center;
@@ -254,16 +248,26 @@ article#skillsInfo ul li:first-of-type {
 .flagCv{
   -webkit-clip-path: polygon(56% 47%, 0 0, 0 97%);
   clip-path: polygon(56% 47%, 0 0, 0 97%);
-  opacity: 0.5;
+  opacity: 0.3;
   position: absolute;
   z-index: -1;
 }
+
 .textInFlag{
   margin-top: 50%;
   margin-left: 10%;
   
 }
-.t{
+.textLink{
   color: #fff;
   font-weight: bold;
+  z-index: 1;
+}
+.t:hover{
+  background-image: url(uk.jpg);
+  background-position: center;
+  
+}
+.tf:hover{
+  background-image: linear-gradient(to right, #3200e9, #6544f1, #8a6ff6, #ab98f9, #cbc0f9, #d8c3f7, #e4c6f4, #eecaf2, #fca1d8, #ff72a7, #ff3d65, #f4000b);
 }
