@@ -238,5 +238,9 @@ article#skillsInfo ul li:first-of-type {
   top: -390%;
   left: -130%;
   position: relative;
+  color: white;
+  
 }
-
+.cvMarginTop{
+  margin-top: 15%;
+}
