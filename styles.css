@@ -241,8 +241,9 @@ article#skillsInfo ul li:first-of-type {
   color: white;
   
 }
-.cvMarginTop{
+.cvMargins{
   margin-top: 15%;
+  margin-bottom: 10%;
 }
 
 .flagCv{
