@@ -84,6 +84,7 @@ $(".changeLanguage").on("click", function (event) {
   changeLanguage($(event.target).data("language"));
 });
 function changeLanguage(language) {
+  
   let x = "index" + language + ".json";
   lang = language;
   fetch(x)
