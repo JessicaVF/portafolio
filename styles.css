@@ -264,33 +264,24 @@ article#skillsInfo ul li:first-of-type {
   font-weight: bold;
   z-index: 1;
 }
-.t:hover{
+.colEnglish:hover{
   background-image: url(uk.jpg);
   background-position: center;
   
 }
-.tf:hover{
+.colFrench:hover{
   background-image: url(fr.png);
   background-position: center;
 }
-.ts:hover{
+.colSpanish:hover{
   background-image: url(spain.png);
   background-position: center;
 
-}
-.test{
-  background-color: black;
-  height: 150px;
-  width: 90%;
-
-  
 }
 .imgDetective{
   opacity: 1;
   width:35%;
   margin-top: -25%;
-  /* margin-left: -30%; */
-  /* background-color: rebeccapurple; */
   clip-path:inset(30% 30% 45% 50%);
 }
 
