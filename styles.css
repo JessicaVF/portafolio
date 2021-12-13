@@ -278,9 +278,6 @@ article#skillsInfo ul li:first-of-type {
   margin-left: 5%;
   clip-path: inset(30% 30% 45% 50%);
 }
-.linkedin:hover {
-  background-color: black;
-}
 
 /*** Contact ***/
 #imgContact {
